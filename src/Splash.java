@@ -26,7 +26,7 @@ public class Splash extends JFrame implements Runnable {
             narrowEffect();
             verticalEffect();
             setVisible(false);
-            // new Login();
+            new Login();
         } catch (Exception e) { }
     }
 

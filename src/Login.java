@@ -17,7 +17,7 @@ public class Login extends JFrame implements ActionListener {
         getContentPane().setBackground(Color.WHITE);
 
         JPanel p1 = new JPanel();
-        p1.setBackground(new Color(131, 193, 233));
+        p1.setBackground(new Color(169, 169, 191));        
         p1.setBounds(0, 0, 400, 400);
         p1.setLayout(null);
         add(p1);
@@ -31,6 +31,7 @@ public class Login extends JFrame implements ActionListener {
 
         JPanel p2 = new JPanel();
         p2.setLayout(null);
+        p2.setBackground(new Color(169, 169, 191));        
         p2.setBounds(417, 30, 450, 300);
         add(p2);
 
@@ -77,7 +78,7 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == signup) {
             setVisible(false);
-            // new SignUp();
+            new SignUp();
         } else {
             try {
                 String username = tfusername.getText();
@@ -89,7 +90,7 @@ public class Login extends JFrame implements ActionListener {
                 ResultSet rs = c.s.executeQuery(query);
                 if (rs.next()) {
                     setVisible(false);
-                    // new Loading(username);
+                    new Loading(username);
                 } else {
                     JOptionPane.showMessageDialog(null, "Incorrect Username or Password !");
                 }
